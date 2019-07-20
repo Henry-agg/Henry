@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>查询</title>
+</head>
+<body>
+    <ul>
+        {% for i in a %}
+            <li>{{ i.bookname }}---{{ i.book_gender }}---{{ i.book_id }}---{{ i.bcontent }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
