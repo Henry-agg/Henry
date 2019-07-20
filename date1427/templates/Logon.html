@@ -1,0 +1,12 @@
+{% extends 'Login.html' %}
+{% block title %}
+    <title>注册</title>
+{% endblock title %}
+{% block b1 %}
+    <form method="post">
+        {% csrf_token %}
+        用户名：<input type="text" name="username" placeholder="请输入用户名"></br>
+        密码：<input type="password" name="pwd" placeholder="请输入密码"></br>
+        <input type="submit" value="注册"></br>
+    </form>
+{% endblock b1 %}

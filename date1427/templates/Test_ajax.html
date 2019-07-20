@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ajax测试</title>
+    <script src="/static/js/jquery.min.js"></script>
+
+    <script>
+        $(function () {
+            $('.but').click(function () {
+                $.ajax({
+                    'url' : '/date1427/ajax_test',
+                    'type' : 'get',
+                    'datetype' : 'json',
+                }).success(function (data) {
+                    if (data.res==1){
+                        $('.box').show().html('这是红色！')
+                    }
+                })
+            })
+        })
+    </script>
+
+    <style>
+        .box{
+            display: none;
+            background: yellow;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <input type="button" class="but" value="ajax点击">
+    <div class="box">1</div>
+</body>
+</html>
